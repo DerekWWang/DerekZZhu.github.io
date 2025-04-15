@@ -24,11 +24,14 @@
     background-color: rgba(24, 24, 27, 0.7); /* Slightly transparent dark background */
     border-radius: 10px;
     backdrop-filter: blur(5px); /* Optional: adds blur effect to background */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 .typing {
@@ -40,5 +43,10 @@
 }
 
 .socials {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    font-size: 24px;
+}
+
+.socials > * {
+    margin-right: 1rem;
 }
