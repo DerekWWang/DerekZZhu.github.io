@@ -12,7 +12,6 @@ nav {
 
     display: flex;
     align-items: center;
-
     /* top: 20px;
     left: 20px; */
     z-index: 100;
@@ -20,11 +19,14 @@ nav {
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
+    padding-right: 100px;
+    right: 0px;
 }
 
 nav a {
     color: #eee;
     text-decoration: none;
+    margin-right: 2vw;
 }
 
 nav a:hover {

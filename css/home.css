@@ -27,12 +27,12 @@
 }
 
 .title {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 .typing {
-    font-size: 32px;
+    font-size: 24px;
     font-family: 'Inter', 'Courier New', Courier, monospace;
     text-align: left;
     margin-bottom: 20px;

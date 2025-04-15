@@ -8,10 +8,10 @@ const POINT_COUNT = 10000;
 const WAVE_WIDTH = 50;
 const WAVE_DEPTH = 50;
 const POINT_SIZE = 0.1;
-const WAVE_SPEED = 2;
+const WAVE_SPEED = 0.5;
 
 //spike extremity
-const MAX_SPIKE_HEIGHT = 9; 
+const MAX_SPIKE_HEIGHT = 5; 
 //spike interval count
 const SPIKE_INTERVAL = 3.0; 
 const SPIKES_PER_BURST = 100;
