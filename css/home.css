@@ -20,7 +20,6 @@
 .intro-card {
     max-width: 45vw;
     width: 45vw;
-    height: 15vw;
     padding: 40px;
     background-color: rgba(24, 24, 27, 0.7); /* Slightly transparent dark background */
     border-radius: 10px;
@@ -38,4 +37,8 @@
     text-align: left;
     margin-bottom: 20px;
     min-height: 40px; 
+}
+
+.socials {
+    margin-top: 3rem;
 }

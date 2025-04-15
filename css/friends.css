@@ -5,13 +5,29 @@
     max-height: 90vh;
     overflow-y: scroll; 
     padding: 1rem;
-  }
+}
   
-  .card {
+.card {
     background-color: #333;
     color: white;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     height: 150px;
-  }
+}
+
+section {
+    margin-top: 5vh;
+    height: 95vh;
+    width: 100%;
+
+    padding: 5rem;
+}
+
+a {
+    color: white;
+}
+
+a::after {
+    color: white;
+}

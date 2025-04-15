@@ -1,0 +1,34 @@
+{
+    "friends": [
+        {
+            "name": "Alex Niu",
+            "link": "",
+            "desc": "A highly motivated software engineer with strong leadership and management skills.",
+            "skills": ["Fullstack Development", "Java", "Typescript"]
+        },
+        {
+            "name": "Hoang Ngyuen",
+            "link":"",
+            "desc":"",
+            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+        },
+        {
+            "name": "Joshua Jung",
+            "link":"",
+            "desc":"",
+            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+        },
+        {
+            "name": "Micheal Li",
+            "link":"",
+            "desc":"",
+            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+        },
+        {
+            "name": "Eric Bae",
+            "link":"",
+            "desc":"",
+            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+        }
+    ]
+}
