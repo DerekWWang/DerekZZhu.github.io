@@ -1,5 +1,6 @@
 #backgroundCanvas {
     position: fixed;
+    background-color: rgb(24 24 27/1);
     top: 0;
     left: 0;
     width: 120vw;

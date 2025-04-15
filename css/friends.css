@@ -1,45 +1,17 @@
-.friends-grid {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.friend {
-    border: 1px solid #eaeaea;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    max-height: 90vh;
+    overflow-y: scroll; 
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.friend:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.skills {
-    margin: 15px 0;
-}
-
-.skills span {
-    display: inline-block;
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    margin: 0 5px 5px 0;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    margin-right: 15px;
-    color: #555;
-    font-size: 1.2em;
-}
-
-.social-links a:hover {
-    color: #0066cc;
-}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    height: 150px;
+  }

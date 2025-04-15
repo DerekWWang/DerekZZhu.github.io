@@ -3,6 +3,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('backgroundCanvas').appendChild(renderer.domElement);
+renderer.setClearColor("rgb(24, 24, 27)", 1);
 
 const POINT_COUNT = 10000;
 const WAVE_WIDTH = 50;
@@ -47,7 +48,7 @@ scene.add(points);
 const activeSpikes = [];
 let lastSpikeTime = 0;
 
-camera.position.z = 15;
+camera.position.z = 10;
 camera.position.y = 5;
 camera.lookAt(0, 0, 0);
 
