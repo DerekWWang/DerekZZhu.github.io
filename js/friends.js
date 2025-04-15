@@ -1,5 +1,4 @@
-import data from '../media/friends.json' assert { type: 'json' };
-
+import data from '../media/friends.json';
 console.log("poop");
 
 console.log(data);

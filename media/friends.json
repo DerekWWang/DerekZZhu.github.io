@@ -16,19 +16,19 @@
             "name": "Joshua Jung",
             "link":"",
             "desc":"",
-            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+            "skills": ["Fullstack Development", "Java", "Typescript"]
         },
         {
             "name": "Micheal Li",
             "link":"",
             "desc":"",
-            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+            "skills": ["Machine Learning", "AI Research", "Java"]
         },
         {
             "name": "Eric Bae",
             "link":"",
             "desc":"",
-            "skills": ["C/C++", "Computer Graphics", "Ligma"]
+            "skills": ["C/C++", "Computer Graphics", "Java"]
         }
     ]
 }
