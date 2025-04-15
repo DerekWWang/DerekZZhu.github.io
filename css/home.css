@@ -1,0 +1,40 @@
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120vw;
+    height: 100%;
+    z-index: -1;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.intro-card {
+    max-width: 45vw;
+    width: 45vw;
+    height: 15vw;
+    padding: 40px;
+    background-color: rgba(24, 24, 27, 0.7); /* Slightly transparent dark background */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Optional: adds blur effect to background */
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.typing {
+    font-size: 32px;
+    font-family: 'Inter', 'Courier New', Courier, monospace;
+    text-align: left;
+    margin-bottom: 20px;
+    min-height: 40px; 
+}

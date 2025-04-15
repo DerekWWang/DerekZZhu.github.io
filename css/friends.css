@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.friend {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+.friend h2 {
+    margin-top: 0;
+    color: #333;
+}
+.friend a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.friend a:hover {
+    text-decoration: underline;
+}
+.skills {
+    margin-top: 10px;
+}
+.skills span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 3px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+header {
+    margin-bottom: 30px;
+}

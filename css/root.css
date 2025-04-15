@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(24 24 27/1);
+    color: #eee;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+
+    /* top: 20px;
+    left: 20px; */
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
