@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/root.css">
-    <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/about.css"> -->
 
     <title>Writing</title>
 </head>
@@ -20,7 +20,174 @@
     </nav>
 
     <section>
-        Check out my writing at <a href="src/writing.html">src/writing</a> 
+        <div class="writing-container">
+            <div class="document-grid" id="document-grid"></div>
+            
+            <div class="reader-container" id="reader-container">
+                <div class="reader-header">
+                    <button id="back-button">← Back to List</button>
+                    <h1 id="reader-title"></h1>
+                    <div class="reader-meta">
+                        <span id="reader-date"></span> · 
+                        <span id="reader-reading-time"></span>
+                    </div>
+                </div>
+                <div class="reader-content" id="reader-content"></div>
+            </div>
+        </div>
+
+        <style>
+        .writing-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .document-card {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .document-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .document-meta {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .reader-container {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reader-header {
+            margin-bottom: 30px;
+        }
+
+        #back-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-weight: 600;
+            padding: 5px 0;
+            margin-bottom: 10px;
+        }
+
+        .reader-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .reader-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        </style>
+
+        <script>
+        const documents = [
+            {
+                slug: "lets_go_home",
+                title: "Lets Go Home",
+                date: "2023-06-15",
+                readingTime: "10 min read"
+            },
+            {
+                slug: "missile",
+                title: "A Missile In Search of a Target",
+                date: "2023-07-22",
+                readingTime: "15 min read"
+            }
+        ];
+
+        const documentGrid = document.getElementById('document-grid');
+        const readerContainer = document.getElementById('reader-container');
+        const backButton = document.getElementById('back-button');
+        const readerTitle = document.getElementById('reader-title');
+        const readerDate = document.getElementById('reader-date');
+        const readerReadingTime = document.getElementById('reader-reading-time');
+        const readerContent = document.getElementById('reader-content');
+
+        function renderDocumentGrid() {
+            documentGrid.innerHTML = '';
+            
+            documents.forEach(doc => {
+                const card = document.createElement('div');
+                card.className = 'document-card';
+                card.innerHTML = `
+                    <h3 class="document-title">${doc.title}</h3>
+                    <div class="document-meta">
+                        <span>${doc.date}</span>
+                        <span>${doc.readingTime}</span>
+                    </div>
+                `;
+                
+                card.addEventListener('click', () => openDocument(doc.slug));
+                documentGrid.appendChild(card);
+            });
+        }
+
+        async function openDocument(slug) {
+            try {
+                const response = await fetch(`../media/${slug}.txt`);
+                if (!response.ok) {
+                    throw new Error('Content not found');
+                }
+                
+                const content = await response.text();
+                
+                const doc = documents.find(d => d.slug === slug);
+                
+                readerTitle.textContent = doc.title;
+                readerDate.textContent = doc.date;
+                readerReadingTime.textContent = doc.readingTime;
+                
+                readerContent.innerHTML = content
+                    .split('\n\n')
+                    .filter(para => para.trim() !== '')
+                    .map(para => `<p>${para}</p>`)
+                    .join('');
+                
+                documentGrid.style.display = 'none';
+                readerContainer.style.display = 'block';
+                
+            } catch (error) {
+                console.error('Error loading document:', error);
+                alert('Could not load the document. Please try again later.');
+            }
+        }
+
+        backButton.addEventListener('click', () => {
+            readerContainer.style.display = 'none';
+            documentGrid.style.display = 'grid';
+        });
+
+        renderDocumentGrid();
+        </script>
     </section>
 </body>
 </html>
