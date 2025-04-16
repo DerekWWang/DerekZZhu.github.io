@@ -1,4 +1,4 @@
-<b> December <b>
+<h2> December </h2>
 
 The boy stood tapping his foot to the beat of the song streaming through his headphones, a yellow strip of indented bumps the only thing between him and the short drop-off to the rails in front of him. He wore a gray backpack and had a black guitar case slung across his right shoulder and his shoulders strained to hold them both. In his hands, he fiddled with his phone, methodically replaying a segment of the song blasting from his headphones over and over again on Spotify.
 
@@ -88,7 +88,7 @@ The boy was conflicted. He hadn't talked to many people lately, so a hug honestl
 
 The boy sighed, put his headphones back on, and walked onto the train. As he pressed play, he stared wistfully through the glass window of the doorway and could swear he saw the girl sitting on one of the platform's benches, waving as his carriage pulled away. He'd see her again, he was sure of it.
 
-February
+<h2> February </h2>
 
 "I thought you were scared of heights"
 
@@ -158,7 +158,7 @@ The boy took one last long look at the glittering city below, at the abyss he ha
 
 He knew she would wait for him. He knew he would see her again, sooner or later. But for tonight, at least, he had decided to stay.
 
-April
+<h2> April </h2>
 
 The boy was exhausted.
 
