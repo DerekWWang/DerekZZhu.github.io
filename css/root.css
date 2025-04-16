@@ -21,6 +21,8 @@ nav {
     justify-content: flex-end;
     align-items: center;
     gap: 2vw;
+
+    background-color: rgb(24 24 27/1);
 }
 
 nav a {
