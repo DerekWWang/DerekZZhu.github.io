@@ -9,7 +9,9 @@ const POINT_COUNT = 10000;
 const WAVE_WIDTH = 50;
 const WAVE_DEPTH = 50;
 const POINT_SIZE = 0.1;
-const WAVE_SPEED = 0.5;
+let WAVE_SPEED = 0.5;
+let clicks = 0;
+
 
 //spike extremity
 const MAX_SPIKE_HEIGHT = 5; 
@@ -59,15 +61,9 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('click', (event) => {
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    ripples.push({
-        x: mouse.x * WAVE_WIDTH * 0.5,
-        z: mouse.y * WAVE_DEPTH * 0.5,
-        time: 0,
-        maxTime: 100,
-        strength: 2 + Math.random() * 3
-    });
+    console.log("Click");
+    
+    WAVE_SPEED += 0.1;
 });
 
 let time = 0;
@@ -121,6 +117,13 @@ function animate() {
         }
     }
     points.rotation.y = time * 0.1;
+
+    if (clicks > 0) {
+        WAVE_SPEED -= 0.1;
+        clicks -= 1;
+    }
+    
+    console.log(clicks);
     
     geometry.attributes.position.needsUpdate = true;
     renderer.render(scene, camera);
